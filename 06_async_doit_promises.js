@@ -15,24 +15,25 @@ function createPromise() {
 
 doIt = createPromise();
 
-doIt.then(function() {
-  console.log('1');
-  doIt2 = createPromise();
+doIt
+  .then(function() {
+    console.log('1');
+    return createPromise();
 
-  return doIt2;
-}).then(function() {
-  console.log('2');
-  doIt3 = createPromise();
+  })
+  .then(function() {
+    console.log('2');
+    return createPromise();
 
-  return doIt3;
-}).then(function() {
-  console.log('3');
-  doIt4 = createPromise();
+  })
+  .then(function() {
+    console.log('3');
+    return createPromise();
 
-  return doIt4;
-}).then(function() {
-  console.log('4');
-});
+  })
+  .then(function() {
+    console.log('4');
+  });
 
 console.log('5');
 
