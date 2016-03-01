@@ -1,10 +1,7 @@
-var doIt, doIt2, doIt3, doIt4;
-
-function createPromise(num) {
+function createPromise() {
   //create a Promise
   var promise = new Promise(function(resolve, reject) {
     setTimeout(function resolvePromise() {
-      // console.log(num);
       resolve();
     }, 1000);
   });
@@ -14,23 +11,23 @@ function createPromise(num) {
 
 }
 
-doIt = createPromise(1);
+doIt = createPromise();
 
-doIt.then(function(prom) {
+doIt.then(function() {
   console.log('1');
-  doIt2 = createPromise(2);
+  doIt2 = createPromise();
+
   return doIt2;
-
-}).then(function(prom) {
+}).then(function() {
   console.log('2');
-  doIt3 = createPromise(3);
+  doIt3 = createPromise();
+
   return doIt3;
-
-}).then(function(prom) {
+}).then(function() {
   console.log('3');
-  doIt4 = createPromise(4);
-  return doIt4;
+  doIt4 = createPromise();
 
+  return doIt4;
 }).then(function() {
   console.log('4');
 });
