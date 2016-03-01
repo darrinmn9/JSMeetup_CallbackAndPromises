@@ -13,9 +13,7 @@ function createPromise() {
 
 }
 
-doIt = createPromise();
-
-doIt
+createPromise()
   .then(function() {
     console.log('1');
     return createPromise();
