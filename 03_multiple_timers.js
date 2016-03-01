@@ -1,17 +1,17 @@
-function startTimerA(){
+function startTimerA() {
   var start = Date.now();
 
-  while(Date.now() - start <= 500){
+  while (Date.now() - start <= 500) {
     //wait
   }
   console.log('loop A');
   startTimerA();
 }
 
-function startTimerB(){
+function startTimerB() {
   var start = Date.now();
 
-  while(Date.now() - start <= 1000){
+  while (Date.now() - start <= 1000) {
     //wait
   }
   console.log('loop B');

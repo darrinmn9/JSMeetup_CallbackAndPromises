@@ -1,24 +1,24 @@
-function doit() {
+function doIt() {
   console.log('1');
   doit2();
 }
 
-function doit2() {
+function doIt2() {
   console.log('2');
   doit3();
 }
 
-function doit3() {
+function doIt3() {
   console.log('3');
   doit4();
 
 }
 
-function doit4() {
+function doIt4() {
   console.log('4');
 }
 
-doit();
+doIt();
 console.log('5');
 
 

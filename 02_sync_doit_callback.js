@@ -1,30 +1,30 @@
-function doit(callback) {
+function doIt(callback) {
   console.log('1');
   callback();
 }
 
-function doit2(callback) {
+function doIt2(callback) {
   console.log('2');
   callback();
 }
 
-function doit3(callback) {
+function doIt3(callback) {
   console.log('3');
   callback();
 
 }
 
-function doit4() {
+function doIt4() {
   console.log('4');
 }
 
-doit(function() {
+doIt(function() {
 
-  doit2(function() {
+  doIt2(function() {
 
-    doit3(function() {
+    doIt3(function() {
 
-      doit4();
+      doIt4();
 
     });
 
