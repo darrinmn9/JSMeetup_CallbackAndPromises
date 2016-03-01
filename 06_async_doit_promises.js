@@ -1,9 +1,12 @@
-function createPromise() {
+var doIt, doIt2, doIt3, doIt4;
+
+function createPromise(num) {
   //create a Promise
   var promise = new Promise(function(resolve, reject) {
     setTimeout(function resolvePromise() {
+      // console.log(num);
       resolve();
-    }, 0);
+    }, 1000);
   });
 
   //return the promise
@@ -11,24 +14,24 @@ function createPromise() {
 
 }
 
-var doIt = createPromise();
-var doIt2 = createPromise();
-var doIt3 = createPromise();
-var doIt4 = createPromise();
+doIt = createPromise(1);
 
-doIt.then(function() {
+doIt.then(function(prom) {
   console.log('1');
-});
+  doIt2 = createPromise(2);
+  return doIt2;
 
-doIt2.then(function() {
+}).then(function(prom) {
   console.log('2');
-});
+  doIt3 = createPromise(3);
+  return doIt3;
 
-doIt3.then(function() {
+}).then(function(prom) {
   console.log('3');
-});
+  doIt4 = createPromise(4);
+  return doIt4;
 
-doIt4.then(function() {
+}).then(function() {
   console.log('4');
 });
 
