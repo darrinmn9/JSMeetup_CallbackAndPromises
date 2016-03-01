@@ -1,25 +1,35 @@
-var promises = 0;
-
-
 function createPromise() {
   //create a Promise
   var promise = new Promise(function(resolve, reject) {
     setTimeout(function resolvePromise() {
-      console.log(promises);
-      if (promises < 4) {
-        promises++;
-        var x = createPromise();
-      }
       resolve();
-    }, 1000);
-
+    }, 0);
   });
 
+  //return the promise
   return promise;
+
 }
 
+var doIt = createPromise();
+var doIt2 = createPromise();
+var doIt3 = createPromise();
+var doIt4 = createPromise();
 
-createPromise();
+doIt.then(function() {
+  console.log('1');
+});
 
+doIt2.then(function() {
+  console.log('2');
+});
+
+doIt3.then(function() {
+  console.log('3');
+});
+
+doIt4.then(function() {
+  console.log('4');
+});
 
 console.log('5');
