@@ -1,6 +1,8 @@
 function createPromise() {
-  //create a Promise
+  // create a Promise
   var promise = new Promise(function(resolve, reject) {
+
+    // wait 1 second before resolving
     setTimeout(function resolvePromise() {
       resolve();
     }, 1000);
@@ -33,3 +35,6 @@ doIt.then(function() {
 });
 
 console.log('5');
+
+
+// http://latentflip.com/loupe/
