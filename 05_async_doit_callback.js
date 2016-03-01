@@ -9,9 +9,13 @@ setTimeout(function doIt1() {
 
       setTimeout(function doIt4() {
         console.log('4');
+
       }, 0);
+
     }, 0);
+
   }, 0);
+
 }, 0);
 
 console.log('5');
