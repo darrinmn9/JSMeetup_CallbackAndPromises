@@ -1,5 +1,3 @@
-var doIt, doIt2, doIt3, doIt4;
-
 function createPromise() {
   //create a Promise
   var promise = new Promise(function(resolve, reject) {
@@ -13,10 +11,10 @@ function createPromise() {
 
 }
 
-doIt = createPromise();
-doIt2 = createPromise();
-doIt3 = createPromise();
-doIt4 = createPromise();
+var doIt = createPromise();
+var doIt2 = createPromise();
+var doIt3 = createPromise();
+var doIt4 = createPromise();
 
 doIt.then(function() {
   console.log('1');
