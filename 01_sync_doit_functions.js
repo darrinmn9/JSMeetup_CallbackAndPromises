@@ -1,16 +1,16 @@
 function doIt() {
   console.log('1');
-  doit2();
+  doIt2();
 }
 
 function doIt2() {
   console.log('2');
-  doit3();
+  doIt3();
 }
 
 function doIt3() {
   console.log('3');
-  doit4();
+  doIt4();
 
 }
 

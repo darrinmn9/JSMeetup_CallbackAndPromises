@@ -1,10 +1,10 @@
-setTimeout(function doIt1() {
+setTimeout(function doIt1(callback) {
   console.log('1');
 
-  setTimeout(function doIt2() {
+  setTimeout(function doIt2(callback) {
     console.log('2');
 
-    setTimeout(function doIt3() {
+    setTimeout(function doIt3(callback) {
       console.log('3');
 
       setTimeout(function doIt4() {
