@@ -10,13 +10,13 @@ setTimeout(function doIt1() {
       setTimeout(function doIt4() {
         console.log('4');
 
-      }, 0);
+      }, 1000);
 
-    }, 0);
+    }, 1000);
 
-  }, 0);
+  }, 1000);
 
-}, 0);
+}, 1000);
 
 console.log('5');
 
