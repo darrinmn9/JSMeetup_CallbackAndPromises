@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tricky Problem</title>
+        <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script type="application/javascript" src="TrickyProblem.js"></script>
+        <script type="application/javascript">
+            $( document ).ready(function() {
+
+                var result = {};
+                result.toString = function() {
+                    return '{ input: ['
+                            + this.input
+                            + '], expected-value: ['
+                            + this.expectedValue
+                            + '], actual-value: ['
+                            + this.actualValue
+                            + '], expected-sum: '
+                            + this.expectedSum
+                            + ', actual-sum: '
+                            + this.actualSum
+                            + ' }';
+                };
+
+                result.input         = [];
+                result.actualValue   = api.process(result.input);
+                result.actualSum     = api.sumFunction(result.actualValue, 0, result.actualValue.length - 1);
+                result.expectedValue = [];
+                result.expectedSum   = 0;
+                console.log('val 01: ' + result);
+
+                result.input         = [1, 2, 3];
+                result.actualValue   = api.process(result.input);
+                result.actualSum     = api.sumFunction(result.actualValue, 0, result.actualValue.length - 1);
+                result.expectedValue = [1, 2, 3];
+                result.expectedSum   = 6;
+                console.log('val 02: ' + result);
+
+                result.input         = [-1, -2, 3];
+                result.actualValue   = api.process(result.input);
+                result.actualSum     = api.sumFunction(result.actualValue, 0, result.actualValue.length - 1);
+                result.expectedValue = [3];
+                result.expectedSum   = 3;
+                console.log('val 03: ' + result);
+
+                result.input         = [10, -11, 12];
+                result.actualValue   = api.process(result.input);
+                result.actualSum     = api.sumFunction(result.actualValue, 0, result.actualValue.length - 1);
+                result.expectedValue = [12];
+                result.expectedSum   = 12;
+                console.log('val 04: ' + result);
+
+                result.input         = [10, -11, 2];
+                result.actualValue   = api.process(result.input);
+                result.actualSum     = api.sumFunction(result.actualValue, 0, result.actualValue.length - 1);
+                result.expectedValue = [10];
+                result.expectedSum   = 10;
+                console.log('val 05: ' + result);
+
+                result.input         = [10, -11, 2];
+                result.actualValue   = api.process(result.input);
+                result.actualSum     = api.sumFunction(result.actualValue, 0, result.actualValue.length - 1);
+                result.expectedValue = [10];
+                result.expectedSum   = 10;
+                console.log('val 05: ' + result);
+
+                result.input         = [-1, 10, -11, 2];
+                result.actualValue   = api.process(result.input);
+                result.actualSum     = api.sumFunction(result.actualValue, 0, result.actualValue.length - 1);
+                result.expectedValue = [10];
+                result.expectedSum   = 10;
+                console.log('val 06: ' + result);
+
+                result.input         = [-1, 10, 11, 2];
+                result.actualValue   = api.process(result.input);
+                result.actualSum     = api.sumFunction(result.actualValue, 0, result.actualValue.length - 1);
+                result.expectedValue = [10, 11, 2];
+                result.expectedSum   = 23;
+                console.log('val 07: ' + result);
+            });
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
